@@ -72,4 +72,35 @@ public class NumberFill {
 		floodFill(r,c-1,val-1);
 		floodFill(r,c+1,val+1);
 	}
+	
+	public static void main(String[] args) {
+		NumberFill n = new NumberFill();
+		String[] s = {".....1.....2....3...", 
+					  "XXXXXXXXXXXXXXXXXXX.", 
+					  "..................X.", 
+					  ".XXXXXXXXXXXXXXXX.X.", 
+					  ".X....2.........X.X.", 
+					  ".X.XXXXXXXXXXXX.X.X.", 
+					  ".X.X....3.....X.X.X.", 
+					  ".X.X.XXXXXXXX.X.X.X.", 
+					  ".X.X.X...4..X.X.X.X.", 
+					  ".X.X.X.XXXX.X.X.X.X4", 
+					  ".X.X.X.X12X.X.X.X.X.", 
+					  ".X.X8X.X....X.X.X.X.", 
+					  ".X.X.X.XXXXXX.X.X.X.", 
+					  ".X.X.X...2....X.X.X.", 
+					  "6X.X.XXXXXXXXXX.X.X.", 
+					  ".X.X.....3......X.X.", 
+					  ".X.XXXXXXXXXXXXXX.X.", 
+					  ".X................X.", 
+					  ".XXXXXXXXXXXXXXXXXX.", 
+					  ".........5.........9"};
+		int x = n.gradient(s);
+		for (int i = 0; i < n.ngrid.length; i++) {
+			for (int j = 0; j < n.ngrid[0].length; j++)
+				System.out.print(n.ngrid[i][j]+" ");
+			System.out.print("\n");
+		}
+		System.out.println(x);
+	}
 }
