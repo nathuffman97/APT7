@@ -18,6 +18,7 @@ public class ListShift {
         }
         
         if (start.info > key) {
+        	shifted.next = start.next;
         	start.next = junkFirst.next;
         	return start;
         }
